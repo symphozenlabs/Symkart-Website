@@ -1973,10 +1973,91 @@ h2 em,
   stop-color: #d4a84b !important;
 }
 .about-visual {
-  background: #fff url('/symphozen-logo.jpeg') center/90% auto no-repeat;
+  background: #fff;
   border: 1px solid #e5ddd4;
 }
 .about-visual span,
 .about-visual i {
   visibility: hidden;
+}
+
+/* Feature cards keep the promise, explanation, and action in one visual unit. */
+.feature-row {
+  display: block;
+  position: relative;
+  padding: 34px 0;
+}
+.feature-num {
+  position: absolute;
+  left: 0;
+  top: 42px;
+  z-index: 2;
+  color: #d4a84b;
+}
+.feature-card {
+  width: calc(100% - 54px);
+  margin-left: 54px;
+  border: 1px solid #60456a;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #291438;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 330px;
+  transition: transform 220ms ease, border-color 220ms ease;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #d4a84b;
+}
+.feature-card .feature-art {
+  height: 100%;
+  min-height: 330px;
+  border-radius: 0;
+}
+.feature-card-content {
+  padding: 38px 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #3b1d4a;
+}
+.feature-card-content h3 {
+  font-size: clamp(25px, 2.5vw, 36px);
+  max-width: 260px;
+  margin-bottom: 14px;
+}
+.feature-card-content p {
+  max-width: 290px;
+  margin-bottom: 26px;
+}
+.feature-card-content a {
+  color: #d4a84b;
+}
+.feature-dashboard .feature-card-content {
+  background: #8e4a80;
+}
+.feature-connect .feature-card-content {
+  background: #24112f;
+}
+@media (max-width: 700px) {
+  .feature-row {
+    padding: 28px 0;
+  }
+  .feature-num {
+    position: static;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .feature-card {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+  }
+  .feature-card .feature-art {
+    min-height: 220px;
+  }
+  .feature-card-content {
+    padding: 28px 24px 26px;
+  }
 }

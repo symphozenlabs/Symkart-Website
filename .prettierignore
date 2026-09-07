@@ -1,9 +1,6 @@
 node_modules
-dist
 .svelte-kit
 .vercel
+dist
 coverage
-.env
-.env.*
-!.env.example
-.DS_Store
+package-lock.json
